@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template:
+    '<div id="designer-host"><gc-activereports-designer [report]="report"> </gc-activereports-designer></div>',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'arjs-angular-viewer-app';
+  report = { id: 'assets/report.rdlx-json', displayName: 'my report' };
 }
